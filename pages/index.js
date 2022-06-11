@@ -7,6 +7,8 @@ import { getPassengerList } from "../api/checkin/passenger";
 import PassengerListForCheckin from "../components/Tables/PassengerList";
 import AlertRed from "../components/Alert/AlertRed";
 import Loader from "../components/loader";
+import PassengerDetailModal from "../components/Modals/PassengerDetail";
+
 const Home = () => {
   const [searchCriteria, setSearchCriteria] = useState("");
   const [passengerList, setPassengerList] = useState("");
@@ -44,7 +46,7 @@ const Home = () => {
       setPassengerList(
         <PassengerListForCheckin
           passengers={passData.passData.data}
-          detailEvet={passengerDetail}
+          detailEvent={passengerDetail}
         />
       );
       console.log(passengerList);
@@ -54,6 +56,7 @@ const Home = () => {
       );
     }
   };
+  
   return (
     <>
     
@@ -100,6 +103,13 @@ const Home = () => {
 
         </div>
         <div className="flex flex-row  mt-5 ">{passengerList}</div>
+
+        {showModal ?(
+            <PassengerDetailModal closeModal={setShowModal} />
+        ):null
+
+        }
+
       </Layout>
     </>
   );

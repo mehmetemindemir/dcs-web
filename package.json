@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@emotion-icons/heroicons-outline": "^3.18.0",
+    "@emotion/styled-base": "^11.0.0",
     "@headlessui/react": "^1.6.4",
     "@heroicons/react": "^1.0.6",
     "axios": "^0.27.2",
+    "emotion": "^11.0.0",
     "flowbite": "^1.4.7",
     "formik": "^2.2.9",
     "heroicons": "^1.0.6",

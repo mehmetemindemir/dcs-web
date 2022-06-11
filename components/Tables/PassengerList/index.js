@@ -1,6 +1,6 @@
 import DefaultButton from "../../Buttons/DefaultButton";
 
-const PassengerListForCheckin=({passengers,detailEvet})=>{
+const PassengerListForCheckin=({passengers,detailEvent})=>{
     return(
         <>
             <div className="relative overflow-x-auto shadow-md sm:rounded-lg w-full mx-5">
@@ -80,7 +80,7 @@ const PassengerListForCheckin=({passengers,detailEvet})=>{
                                 </div>
                             </td>
                             <td className="px-3 py-2 ">
-                                <DefaultButton OnClickHandle={()=>{detailEvet(item.bpId)}} Name="Detail"/>
+                                <DefaultButton OnClickHandle={()=>{detailEvent(item.bpId)}} Name="Detail"/>
                             </td>
                             <td className="px-3 py-2 ">
                                 $2999
